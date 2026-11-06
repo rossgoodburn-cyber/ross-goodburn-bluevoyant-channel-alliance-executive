@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ross Goodburn | Channel & Alliances Executive Candidacy — BlueVoyant</title>
+  
+  <!-- Google Fonts & Tailwind CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            bv: {
+              obsidian: '#070a12',
+              navy: '#0b1329',
+              surface: '#111c38',
+              surfaceLight: '#18274d',
+              border: '#1e3260',
+              cyan: '#00d2ff',
+              blue: '#2563eb',
+              electric: '#38bdf8',
+              accent: '#06b6d4',
+            }
+          },
+          backgroundImage: {
+            'radial-glow': 'radial-gradient(circle at 50% 0%, rgba(0, 210, 255, 0.15), transparent 70%)',
+            'cyber-grid': 'linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom cyber aesthetics */
+    .glass-card {
+      background: rgba(17, 28, 56, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 210, 255, 0.15);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(0, 210, 255, 0.45);
+      box-shadow: 0 10px 30px -10px rgba(0, 210, 255, 0.2);
+    }
+    .text-glow {
+      text-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+    }
+    .cyber-border-gradient {
+      border-image: linear-gradient(to right, #00d2ff, #2563eb) 1;
+    }
+    /* Hide scrollbar for tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="bg-bv-obsidian text-slate-100 font-sans antialiased selection:bg-bv-cyan selection:text-bv-obsidian relative min-h-screen">
+
+  <!-- Ambient Cyber Lighting Background -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-radial-glow blur-3xl opacity-70"></div>
+    <div class="absolute top-1/3 -left-48 w-96 h-96 bg-bv-blue/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 -right-48 w-96 h-96 bg-bv-cyan/15 rounded-full blur-3xl"></div>
+    <div class="absolute inset-0 bg-cyber-grid bg-[size:4rem_4rem] opacity-30"></div>
+  </div>
+
+  <!-- Top Sticky Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-bv-obsidian/80 border-b border-bv-border/60 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Candidate Identity -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-bv-cyan to-bv-blue flex items-center justify-center font-extrabold text-bv-obsidian text-lg shadow-lg shadow-bv-cyan/20 group-hover:scale-105 transition-transform">
+          RG
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-white text-lg tracking-tight group-hover:text-bv-cyan transition-colors">Ross Goodburn</span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-mono tracking-wider bg-bv-cyan/10 text-bv-cyan border border-bv-cyan/30">
+              BV CANDIDACY
+            </span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium">Channel & Alliances Executive — Microsoft Ecosystem</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden xl:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#summary" class="hover:text-bv-cyan transition-colors">Executive Summary</a>
+        <a href="#matrix" class="hover:text-bv-cyan transition-colors">Role Alignment</a>
+        <a href="#roadmap" class="hover:text-bv-cyan transition-colors">30-60-90 Plan</a>
+        <a href="#experience" class="hover:text-bv-cyan transition-colors">Commercial Track Record</a>
+        <a href="#references" class="hover:text-bv-cyan transition-colors">Internal BV Advocates</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <button onclick="toggleModal('contact-modal')" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-bv-surface text-slate-200 border border-bv-border hover:border-bv-cyan/50 hover:text-white transition-all">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-bv-cyan"></i>
+          Direct Contact
+        </button>
+        <a href="#matrix" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-bv-cyan to-bv-blue text-bv-obsidian hover:shadow-lg hover:shadow-bv-cyan/25 hover:brightness-110 transition-all font-bold">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+          Explore Candidacy
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-24 space-y-28">
+
+    <!-- HERO SECTION -->
+    <section id="summary" class="pt-6 sm:pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Value Prop & Pitch -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-bv-surface border border-bv-cyan/30 text-xs text-slate-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="font-mono text-bv-cyan font-semibold">Immediate Availability</span>
+            <span class="text-slate-500">|</span>
+            <span>London & Northern Europe Strategic Co-Sell</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
+            Scaling <span class="bg-gradient-to-r from-bv-cyan via-sky-300 to-blue-500 bg-clip-text text-transparent">Microsoft Alliances</span> & Partner-Sourced ARR at BlueVoyant.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+            15-year cybersecurity channel hunter and relationship builder. Proven specialist in driving repeatable co-sell velocity across 
+            <strong class="text-white font-semibold">Microsoft Sentinel, Defender XDR, and Managed Detection & Response (MDR)</strong> with Tier-1 GSIs, VARs, and Northern European regional powerhouses.
+          </p>
+
+          <!-- Core Callouts / Badges -->
+          <div class="flex flex-wrap gap-2.5 pt-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bv-surfaceLight/70 border border-bv-border text-xs text-slate-300">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-bv-cyan"></i> Beaconsfield (30m to London & LHR)
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bv-surfaceLight/70 border border-bv-border text-xs text-slate-300">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> UK Right to Work (Permanent)
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bv-surfaceLight/70 border border-bv-border text-xs text-slate-300">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-amber-400"></i> BlueVoyant Internal References
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <button onclick="toggleModal('contact-modal')" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-bv-cyan to-bv-blue text-slate-950 font-bold text-sm flex items-center gap-2.5 shadow-xl shadow-bv-cyan/20 hover:scale-[1.02] transition-all">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              Schedule Alignment Discussion
+            </button>
+            <a href="https://www.linkedin.com/in/rossgoodburn/" target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl bg-bv-surface border border-bv-border text-slate-200 font-semibold text-sm flex items-center gap-2 hover:border-bv-cyan/60 hover:text-white transition-all">
+              <i data-lucide="linkedin" class="w-4 h-4 text-sky-400"></i>
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Live High-Impact Scorecard -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl p-6 sm:p-7 space-y-6 relative overflow-hidden">
+            <div class="absolute -top-16 -right-16 w-40 h-40 bg-bv-cyan/10 rounded-full blur-2xl"></div>
+            
+            <div class="flex items-center justify-between border-b border-bv-border/70 pb-4">
+              <div>
+                <span class="text-[11px] font-mono uppercase tracking-wider text-bv-cyan font-semibold">Executive Metric Summary</span>
+                <h3 class="text-lg font-bold text-white">Commercial Proof Points</h3>
+              </div>
+              <span class="px-2.5 py-1 rounded text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                VERIFIABLE
+              </span>
+            </div>
+
+            <!-- Metric Cards -->
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-bv-navy/80 p-4 rounded-xl border border-bv-border">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">148%</div>
+                <div class="text-xs text-slate-400 mt-1">H1 ARR Target Attainment (Creatio EMEA)</div>
+              </div>
+              <div class="bg-bv-navy/80 p-4 rounded-xl border border-bv-border">
+                <div class="text-2xl sm:text-3xl font-extrabold text-bv-cyan font-mono">$2.6M</div>
+                <div class="text-xs text-slate-400 mt-1">Softcat Revenue Scaled (from $20k baseline)</div>
+              </div>
+              <div class="bg-bv-navy/80 p-4 rounded-xl border border-bv-border">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">£11.1M</div>
+                <div class="text-xs text-slate-400 mt-1">Qualified Partner Pipeline Created (eSentire)</div>
+              </div>
+              <div class="bg-bv-navy/80 p-4 rounded-xl border border-bv-border">
+                <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">£181k</div>
+                <div class="text-xs text-slate-400 mt-1">Latest P60 (Consistent High Earner)</div>
+              </div>
+            </div>
+
+            <!-- Quote/Philosophy snippet -->
+            <div class="bg-bv-surfaceLight/50 p-4 rounded-xl border border-bv-border/50 text-xs text-slate-300 leading-relaxed italic">
+              "Not a passive account 'farmer'. A commercial hunter who scales partnerships through systematic sales rigor, deep partner mindshare, and value selling."
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Key Partner Network Bar -->
+      <div class="mt-14 pt-8 border-t border-bv-border/60">
+        <p class="text-xs uppercase font-mono tracking-widest text-slate-400 text-center mb-6">
+          Established Commercial & Technical Relationships With BlueVoyant Ecosystem Partners
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-sm font-semibold text-slate-300">
+          <span class="px-4 py-2 rounded-lg bg-bv-surface/70 border border-bv-border hover:border-bv-cyan/40 transition-colors">Softcat</span>
+          <span class="px-4 py-2 rounded-lg bg-bv-surface/70 border border-bv-border hover:border-bv-cyan/40 transition-colors">CDW UK</span>
+          <span class="px-4 py-2 rounded-lg bg-bv-surface/70 border border-bv-border hover:border-bv-cyan/40 transition-colors">Saepio InfoSec</span>
+          <span class="px-4 py-2 rounded-lg bg-bv-surface/70 border border-bv-border hover:border-bv-cyan/40 transition-colors">Computacenter</span>
+          <span class="px-4 py-2 rounded-lg bg-bv-surface/70 border border-bv-border hover:border-bv-cyan/40 transition-colors">Bytes Software</span>
+          <span class="px-4 py-2 rounded-lg bg-bv-surface/70 border border-bv-border hover:border-bv-cyan/40 transition-colors">EY (Ernst & Young)</span>
+          <span class="px-4 py-2 rounded-lg bg-bv-surface/70 border border-bv-border hover:border-bv-cyan/40 transition-colors">Deloitte</span>
+          <span class="px-4 py-2 rounded-lg bg-bv-surface/70 border border-bv-border hover:border-bv-cyan/40 transition-colors">BT Group</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOB SPECIFICATION ALIGNMENT MATRIX -->
+    <section id="matrix" class="space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-bv-cyan font-bold">Requirement by Requirement</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">BlueVoyant Spec vs. Proven Qualification</h2>
+        <p class="text-sm text-slate-400">
+          How my 15-year cybersecurity background directly matches every requirement outlined for the Channel & Alliances Executive role.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        
+        <!-- Requirement 1 -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-start justify-between gap-3">
+            <span class="px-2.5 py-1 rounded bg-blue-500/10 border border-blue-500/30 text-[11px] font-mono text-sky-300 font-semibold">
+              BLUEVOYANT REQUIREMENT
+            </span>
+            <span class="text-emerald-400 flex items-center gap-1 text-xs font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 100% MATCH
+            </span>
+          </div>
+          <h3 class="text-base font-bold text-white">6+ Years in Cyber Partnerships, Alliances & Sales</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            <strong class="text-bv-cyan font-semibold">15+ consecutive years</strong> driving cyber partner acquisition and channel acceleration across UK&I, Benelux, and Nordics at <span class="text-white">Creatio, Claroty, eSentire, KnowBe4, and NCC Group</span>.
+          </p>
+          <div class="pt-2 text-xs font-mono text-slate-400 border-t border-bv-border/60">
+            Differentiator: Trusted conduit between vendor execs, partner leadership, and field AEs.
+          </div>
+        </div>
+
+        <!-- Requirement 2 -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-start justify-between gap-3">
+            <span class="px-2.5 py-1 rounded bg-blue-500/10 border border-blue-500/30 text-[11px] font-mono text-sky-300 font-semibold">
+              BLUEVOYANT REQUIREMENT
+            </span>
+            <span class="text-emerald-400 flex items-center gap-1 text-xs font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 100% MATCH
+            </span>
+          </div>
+          <h3 class="text-base font-bold text-white">Proven Track Record in Sales & Partner Growth</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Consistent overachievement against quotas: Currently <strong class="text-emerald-400 font-semibold">148% of ARR target</strong> at Creatio. Verifiable top-tier earnings across 4 consecutive P60s (<strong class="text-white">£158k to £181k</strong>).
+          </p>
+          <div class="pt-2 text-xs font-mono text-slate-400 border-t border-bv-border/60">
+            Differentiator: Scaled Softcat from $20k to $2.6M; closed $4.18M at Claroty (110%).
+          </div>
+        </div>
+
+        <!-- Requirement 3 -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-start justify-between gap-3">
+            <span class="px-2.5 py-1 rounded bg-blue-500/10 border border-blue-500/30 text-[11px] font-mono text-sky-300 font-semibold">
+              BLUEVOYANT REQUIREMENT
+            </span>
+            <span class="text-emerald-400 flex items-center gap-1 text-xs font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 100% MATCH
+            </span>
+          </div>
+          <h3 class="text-base font-bold text-white">Microsoft Business, Sales Cadence & Security Fluency</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Positioned MDR around <strong class="text-bv-cyan font-semibold">Microsoft Sentinel, Defender XDR, and Azure M365 E5 architectures</strong> at eSentire. Deep understanding of Microsoft SMC & Enterprise quarterly cadences and MACC burn leverage.
+          </p>
+          <div class="pt-2 text-xs font-mono text-slate-400 border-t border-bv-border/60">
+            Training: Formal Microsoft Star Player Solution Selling + Cisco Sales Expert.
+          </div>
+        </div>
+
+        <!-- Requirement 4 -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-start justify-between gap-3">
+            <span class="px-2.5 py-1 rounded bg-blue-500/10 border border-blue-500/30 text-[11px] font-mono text-sky-300 font-semibold">
+              BLUEVOYANT REQUIREMENT
+            </span>
+            <span class="text-emerald-400 flex items-center gap-1 text-xs font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 100% MATCH
+            </span>
+          </div>
+          <h3 class="text-base font-bold text-white">Partner Enablement & Challenger Value Selling</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Certified in <strong class="text-bv-cyan font-semibold">Challenger Sales</strong> (Selling, Coaching, Activating a Mobiliser). 15 years teaching partner reps how to reframe customer perspectives around managed cyber risk instead of competing on price.
+          </p>
+          <div class="pt-2 text-xs font-mono text-slate-400 border-t border-bv-border/60">
+            Execution: Running deal inspection, joint pre-sales scoping, and co-selling directly in the trenches.
+          </div>
+        </div>
+
+        <!-- Requirement 5 -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-start justify-between gap-3">
+            <span class="px-2.5 py-1 rounded bg-blue-500/10 border border-blue-500/30 text-[11px] font-mono text-sky-300 font-semibold">
+              BLUEVOYANT REQUIREMENT
+            </span>
+            <span class="text-emerald-400 flex items-center gap-1 text-xs font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 100% MATCH
+            </span>
+          </div>
+          <h3 class="text-base font-bold text-white">Deep Cyber Technologies & Managed Solutions Background</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Comprehensive domain mastery: <strong class="text-white">MDR, XDR, SIEM, 24/7 SOC operations, Supply Chain Defense, Digital Risk Protection, CTEM, EASM, CNAPP</strong>, penetration testing, NIS2, and ISO27001 advisory.
+          </p>
+          <div class="pt-2 text-xs font-mono text-slate-400 border-t border-bv-border/60">
+            Engineering foundation: BEng (Hons) Control Engineering, Univ of Sheffield.
+          </div>
+        </div>
+
+        <!-- Requirement 6 -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-start justify-between gap-3">
+            <span class="px-2.5 py-1 rounded bg-blue-500/10 border border-blue-500/30 text-[11px] font-mono text-sky-300 font-semibold">
+              BLUEVOYANT REQUIREMENT
+            </span>
+            <span class="text-emerald-400 flex items-center gap-1 text-xs font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 100% MATCH
+            </span>
+          </div>
+          <h3 class="text-base font-bold text-white">London Hybrid Presence & Northern Europe Mobility</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Resident in <strong class="text-white">Beaconsfield, Buckinghamshire</strong> — exactly 30 minutes from London Marylebone and 30 minutes from London Heathrow. Immediate, frictionless commute to BlueVoyant's London office and Microsoft Paddington/Reading campuses.
+          </p>
+          <div class="pt-2 text-xs font-mono text-slate-400 border-t border-bv-border/60">
+            Work Status: Full permanent UK Right to Work (no sponsorship needed).
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STRATEGIC 30-60-90 DAY BLUEVOYANT / MICROSOFT PLAN -->
+    <section id="roadmap" class="space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-bv-cyan font-bold">Execution Blueprint</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">30-60-90 Day Strategic Plan for BlueVoyant</h2>
+        <p class="text-sm text-slate-400">
+          A proactive plan designed to report into the SVP, Sales and start driving qualified co-sell pipeline within Quarter One.
+        </p>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="flex justify-center">
+        <div class="inline-flex p-1.5 rounded-xl bg-bv-surface border border-bv-border max-w-md w-full justify-between">
+          <button onclick="switchTab('plan-30')" id="tab-btn-30" class="flex-1 py-2 px-3 text-xs font-bold rounded-lg bg-gradient-to-r from-bv-cyan to-bv-blue text-bv-obsidian transition-all">
+            Days 1–30
+          </button>
+          <button onclick="switchTab('plan-60')" id="tab-btn-60" class="flex-1 py-2 px-3 text-xs font-bold rounded-lg text-slate-400 hover:text-white transition-all">
+            Days 31–60
+          </button>
+          <button onclick="switchTab('plan-90')" id="tab-btn-90" class="flex-1 py-2 px-3 text-xs font-bold rounded-lg text-slate-400 hover:text-white transition-all">
+            Days 61–90+
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 relative">
+
+        <!-- 30 Days Panel -->
+        <div id="plan-30" class="space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-bv-border/80 pb-4">
+            <div>
+              <span class="text-xs font-mono text-bv-cyan font-bold uppercase tracking-wider">Phase 1: Foundation & Mapping</span>
+              <h3 class="text-2xl font-bold text-white">Absorb, Align & Map Key Stakeholders</h3>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-bv-cyan/10 text-bv-cyan border border-bv-cyan/30 self-start sm:self-auto">
+              MONTH 1 DELIVERABLES
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-bv-navy/70 p-5 rounded-xl border border-bv-border space-y-2.5">
+              <div class="w-8 h-8 rounded-lg bg-bv-cyan/10 text-bv-cyan flex items-center justify-center font-bold">1</div>
+              <h4 class="font-bold text-white text-sm">Internal Solution Deep-Dive</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Immerse in BlueVoyant’s proprietary MXDR, Supply Chain Defense (Third-Party Risk), and Digital Risk Protection value propositions. Connect with BV Sales leadership, inside sales, and field AEs.
+              </p>
+            </div>
+            <div class="bg-bv-navy/70 p-5 rounded-xl border border-bv-border space-y-2.5">
+              <div class="w-8 h-8 rounded-lg bg-bv-cyan/10 text-bv-cyan flex items-center justify-center font-bold">2</div>
+              <h4 class="font-bold text-white text-sm">Microsoft Ecosystem Mapping</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Map the Northern Europe Microsoft matrix: SMC (Small, Medium, Corporate) and Enterprise Security Specialists, Partner Development Managers (PDMs), and Cloud Solution Architects (CSAs).
+              </p>
+            </div>
+            <div class="bg-bv-navy/70 p-5 rounded-xl border border-bv-border space-y-2.5">
+              <div class="w-8 h-8 rounded-lg bg-bv-cyan/10 text-bv-cyan flex items-center justify-center font-bold">3</div>
+              <h4 class="font-bold text-white text-sm">Partner Baseline Audit</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Audit existing BlueVoyant relationships with CDW, Saepio, Softcat, Computacenter, and EY. Identify current pipeline gaps and establish regular communication rhythm.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 60 Days Panel (Hidden by default) -->
+        <div id="plan-60" class="hidden space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-bv-border/80 pb-4">
+            <div>
+              <span class="text-xs font-mono text-bv-cyan font-bold uppercase tracking-wider">Phase 2: Enablement & Velocity</span>
+              <h3 class="text-2xl font-bold text-white">Mobilize Partner Sellers & Joint Campaigns</h3>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-bv-cyan/10 text-bv-cyan border border-bv-cyan/30 self-start sm:self-auto">
+              MONTH 2 DELIVERABLES
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-bv-navy/70 p-5 rounded-xl border border-bv-border space-y-2.5">
+              <div class="w-8 h-8 rounded-lg bg-sky-400/10 text-sky-400 flex items-center justify-center font-bold">4</div>
+              <h4 class="font-bold text-white text-sm">Partner Enablement Blitz</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Deploy 'Challenger' sales enablement modules for partner security desks (Softcat, CDW, Saepio). Focus: Positioning BlueVoyant’s SOC around Microsoft Sentinel & M365 E5 license retention.
+              </p>
+            </div>
+            <div class="bg-bv-navy/70 p-5 rounded-xl border border-bv-border space-y-2.5">
+              <div class="w-8 h-8 rounded-lg bg-sky-400/10 text-sky-400 flex items-center justify-center font-bold">5</div>
+              <h4 class="font-bold text-white text-sm">Co-Sell Account Mapping</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Run targeted account-mapping sessions connecting Microsoft SMC sellers with BlueVoyant direct sales reps, prioritizing accounts with active MACC commitments ripe for security optimization.
+              </p>
+            </div>
+            <div class="bg-bv-navy/70 p-5 rounded-xl border border-bv-border space-y-2.5">
+              <div class="w-8 h-8 rounded-lg bg-sky-400/10 text-sky-400 flex items-center justify-center font-bold">6</div>
+              <h4 class="font-bold text-white text-sm">Joint Demand Gen Launch</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Collaborate with BlueVoyant marketing to execute targeted partner webinars, executive roundtables, and co-branded collateral for Supply Chain Cyber Risk & NIS2 readiness.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 90 Days Panel (Hidden by default) -->
+        <div id="plan-90" class="hidden space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-bv-border/80 pb-4">
+            <div>
+              <span class="text-xs font-mono text-bv-cyan font-bold uppercase tracking-wider">Phase 3: Scale & Governance</span>
+              <h3 class="text-2xl font-bold text-white">Execute QBRs, Sourced ARR & Regional Scale</h3>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-bv-cyan/10 text-bv-cyan border border-bv-cyan/30 self-start sm:self-auto">
+              MONTH 3+ DELIVERABLES
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-bv-navy/70 p-5 rounded-xl border border-bv-border space-y-2.5">
+              <div class="w-8 h-8 rounded-lg bg-emerald-400/10 text-emerald-400 flex items-center justify-center font-bold">7</div>
+              <h4 class="font-bold text-white text-sm">First Formal Microsoft QBRs</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Conduct structured Quarterly Business Reviews with Microsoft GPS and Enterprise leads to showcase joint pipeline, wins, and next-quarter account targets.
+              </p>
+            </div>
+            <div class="bg-bv-navy/70 p-5 rounded-xl border border-bv-border space-y-2.5">
+              <div class="w-8 h-8 rounded-lg bg-emerald-400/10 text-emerald-400 flex items-center justify-center font-bold">8</div>
+              <h4 class="font-bold text-white text-sm">Northern Europe Expansion</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Replicate successful UK co-sell motions into Benelux and Nordics, onboarding key regional Microsoft partners and systems integrators.
+              </p>
+            </div>
+            <div class="bg-bv-navy/70 p-5 rounded-xl border border-bv-border space-y-2.5">
+              <div class="w-8 h-8 rounded-lg bg-emerald-400/10 text-emerald-400 flex items-center justify-center font-bold">9</div>
+              <h4 class="font-bold text-white text-sm">Predictable ARR Cadence</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Establish a repeatable deal registration cadence in Salesforce, institutionalizing partner-sourced pipeline metrics for regular executive briefing to the SVP, Sales.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CAREER MILESTONES & EXPERIENCE -->
+    <section id="experience" class="space-y-10">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-bv-cyan font-bold">Demonstrated Track Record</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">15 Years in Cyber Channel Leadership</h2>
+        <p class="text-sm text-slate-400">
+          A career built on creating new market opportunities and scaling strategic cybersecurity alliances.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+
+        <!-- Creatio -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-bv-border pb-3">
+            <div>
+              <span class="text-xs font-mono text-emerald-400 font-semibold">SEPTEMBER 2025 – PRESENT</span>
+              <h3 class="text-xl font-bold text-white">Senior Partner Manager EMEA — Creatio</h3>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold">
+              148% OF H1 FY27 REVENUE TARGET
+            </div>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Spearheaded UK&I and Northern Europe partner acquisition and GTM strategy, achieving 148% of quota. Recruited and enabled VARs, GSIs, and advisory partners across the region, uncovering two of the largest enterprise opportunities in company UK history.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">GSI Alliances</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">Advisory Recruitment</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">UK&I / Northern Europe</span>
+          </div>
+        </div>
+
+        <!-- Claroty -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-bv-border pb-3">
+            <div>
+              <span class="text-xs font-mono text-sky-400 font-semibold">DECEMBER 2023 – AUGUST 2025</span>
+              <h3 class="text-xl font-bold text-white">Channel Sales Director (UK&I, Benelux & Nordics) — Claroty</h3>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-mono font-bold">
+              2024: $4.18M (110% OF $3.8M TARGET)
+            </div>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Hired to cover UK&I and rapidly expanded to manage Benelux and Nordics within 60 days. Built joint accountability business plans with focus MSSPs and VARs. 
+            <strong class="text-white font-semibold">Independently onboarded BT Group as an enterprise partner</strong>. Leveraged Cloud Service Provider co-sell routes (AWS ISV Accelerate) to maximize deal registration velocity.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">BT Group Onboarding</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">CSP Co-Sell</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">Benelux & Nordics Expansion</span>
+          </div>
+        </div>
+
+        <!-- eSentire -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-bv-border pb-3">
+            <div>
+              <span class="text-xs font-mono text-bv-cyan font-semibold">JUNE 2021 – DECEMBER 2023</span>
+              <h3 class="text-xl font-bold text-white">Senior Channel Development Manager EMEA — eSentire</h3>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-bv-cyan/10 border border-bv-cyan/30 text-bv-cyan text-xs font-mono font-bold">
+              £11.1M+ QUALIFIED ACTIVE PIPELINE
+            </div>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Directly recruited by the VP of EMEA upon recommendation from Adam Louca (CTO at Softcat). Built eSentire’s channel outside of North America from scratch.
+            Evangelized 24/7 Managed Detection & Response (MDR) centered around <strong class="text-white">Microsoft Sentinel and Microsoft Defender XDR</strong>. Established recurring revenue practices with <strong class="text-white">Softcat, CDW, and Saepio</strong>, and signed distributors Brigantia and Exertis.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">Microsoft Sentinel MDR</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">Saepio & Softcat Practice</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">M365 E5 Architecture</span>
+          </div>
+        </div>
+
+        <!-- KnowBe4 -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-bv-border pb-3">
+            <div>
+              <span class="text-xs font-mono text-amber-400 font-semibold">APRIL 2018 – JUNE 2021</span>
+              <h3 class="text-xl font-bold text-white">Senior Channel Manager — KnowBe4</h3>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono font-bold">
+              502% – 890% OF ANNUAL TARGETS
+            </div>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Joined during high-growth scale phase. Scaled partner revenue at <strong class="text-white">Softcat from $20k to $1.3M (2019) and $2.6M (2020)</strong> through deep daily engagement, pre-sales technical scoping, and account mapping. Delivered consecutive hyper-quota years: 2018 (890%), 2019 (796%), 2020 (502%).
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">Softcat ($20k -> $2.6M)</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">SaaS Hyper-Scale</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">Computacenter & SoftwareONE</span>
+          </div>
+        </div>
+
+        <!-- NCC Group / RandomStorm -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-bv-border pb-3">
+            <div>
+              <span class="text-xs font-mono text-slate-400 font-semibold">AUGUST 2010 – APRIL 2018</span>
+              <h3 class="text-xl font-bold text-white">Senior Channel Sales Manager — NCC Group & RandomStorm</h3>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-slate-500/10 border border-slate-500/30 text-slate-300 text-xs font-mono font-bold">
+              SALESPERSON OF THE YEAR (128%)
+            </div>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Built RandomStorm’s channel ecosystem from the ground up prior to its acquisition by FTSE 250 cybersecurity leader NCC Group in 2016. Post-acquisition, led NCC Group’s largest global systems integrator partnership (SITA).
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">FTSE 250 Security</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">Global SI Lead (SITA)</span>
+            <span class="px-2 py-0.5 rounded bg-bv-surface border border-bv-border">M&A Integration</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERNAL BLUEVOYANT ADVOCATES & ENDORSEMENTS -->
+    <section id="references" class="space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold">Internal BlueVoyant Verification</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Professional References & Advocates</h2>
+        <p class="text-sm text-slate-400">
+          Trusted colleagues within BlueVoyant and our key partner ecosystem who endorse Ross Goodburn’s capability for this role.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Reference 1: Adam Trotter -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 relative border-bv-cyan/40">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-bv-cyan/20 to-bv-blue/20 border border-bv-cyan/40 flex items-center justify-center text-bv-cyan font-bold">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white">Adam Trotter</h3>
+            <p class="text-xs font-mono text-bv-cyan">Senior Implementation Project Manager</p>
+            <p class="text-xs text-slate-400 font-semibold mt-0.5">BlueVoyant</p>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Worked alongside Ross at NCC Group. Directly flagged this role to Ross based on firsthand experience with his partner execution, work ethic, and ability to drive adoption.
+          </p>
+          <div class="pt-3 border-t border-bv-border/60 text-[11px] font-mono text-emerald-400">
+            ✓ Confirmed Reference Available
+          </div>
+        </div>
+
+        <!-- Reference 2: Leah Broadley -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 relative border-bv-cyan/40">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-bv-cyan/20 to-bv-blue/20 border border-bv-cyan/40 flex items-center justify-center text-bv-cyan font-bold">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white">Leah Broadley</h3>
+            <p class="text-xs font-mono text-bv-cyan">Strategic CSM</p>
+            <p class="text-xs text-slate-400 font-semibold mt-0.5">BlueVoyant</p>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Worked with Ross at NCC Group. Endorses his partner management skills, consultative client engagement, and seamless cultural fit for BlueVoyant’s sales organization.
+          </p>
+          <div class="pt-3 border-t border-bv-border/60 text-[11px] font-mono text-emerald-400">
+            ✓ Confirmed Reference Available
+          </div>
+        </div>
+
+        <!-- Reference 3: Rob Pooley -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 relative border-sky-500/30">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500/20 to-blue-500/20 border border-sky-400/40 flex items-center justify-center text-sky-400 font-bold">
+            <i data-lucide="briefcase" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white">Rob Pooley</h3>
+            <p class="text-xs font-mono text-sky-400">Key BlueVoyant Strategic Partner</p>
+            <p class="text-xs text-slate-400 font-semibold mt-0.5">Saepio Information Security</p>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Multi-year working relationship across Softcat and Saepio. Can attest directly to Ross’s channel rigor, honesty, responsiveness, and ability to build profitable partner practices.
+          </p>
+          <div class="pt-3 border-t border-bv-border/60 text-[11px] font-mono text-emerald-400">
+            ✓ Partner Testimonial Ready
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL DOMAIN MASTERY & CREDENTIALS -->
+    <section class="space-y-8">
+      <div class="glass-card rounded-2xl p-8 space-y-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 space-y-3">
+            <span class="text-xs font-mono uppercase tracking-widest text-bv-cyan font-bold">Domain Expertise</span>
+            <h3 class="text-2xl font-bold text-white">Full-Spectrum Cyber & Alliances Toolkit</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Equipped to hold credible technical discussions with both Microsoft Cloud Solution Architects (CSAs) and enterprise C-level security leaders.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">Microsoft Sentinel</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">Defender XDR</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">MDR / 24/7 SOC</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">Supply Chain Cyber Risk</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">Digital Risk Protection</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">M365 E5 Architecture</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">CTEM & EASM</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">CNAPP & Cloud Security</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">Incident Response</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">NIS2 & ISO 27001</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">Salesforce.com</span>
+            <span class="px-3 py-1.5 rounded-lg bg-bv-surfaceLight text-xs font-mono text-slate-200 border border-bv-border">Azure Marketplace & MACC</span>
+          </div>
+        </div>
+
+        <div class="border-t border-bv-border/70 pt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
+          <div>
+            <span class="font-bold text-white block mb-1">Academic Foundation</span>
+            <p>University of Sheffield — BEng (Hons) in Control Engineering</p>
+            <p class="text-slate-400 mt-0.5">BTEC ONC & HNC Process Plant Engineering</p>
+          </div>
+          <div>
+            <span class="font-bold text-white block mb-1">Commercial Sales Certifications</span>
+            <p>• Challenger Sales Training (Selling, Coaching & Mobilisers)</p>
+            <p>• Microsoft Star Player Solution Selling</p>
+            <p>• Cisco Sales Expert & Mercuri Sales Management</p>
+          </div>
+          <div>
+            <span class="font-bold text-white block mb-1">Location & Office Proximity</span>
+            <p>Beaconsfield, Buckinghamshire</p>
+            <p class="text-slate-400 mt-0.5">30 min direct train to London Marylebone</p>
+            <p class="text-slate-400">30 min road to Heathrow (LHR) for NE travel</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="glass-card rounded-3xl p-8 sm:p-12 text-center space-y-6 relative overflow-hidden border-bv-cyan/40">
+      <div class="max-w-2xl mx-auto space-y-4">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Ready to accelerate BlueVoyant's Microsoft co-sell engine in Northern Europe.
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">
+          Let’s discuss how 15 years of channel rigor, proven overachievement, and deep partner mindshare can convert into BlueVoyant ARR.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-3">
+          <button onclick="toggleModal('contact-modal')" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-bv-cyan to-bv-blue text-slate-950 font-bold text-sm shadow-xl shadow-bv-cyan/25 hover:scale-105 transition-all">
+            Initiate Contact
+          </button>
+          <a href="mailto:ross.goodburn@gmail.com" class="px-6 py-3.5 rounded-xl bg-bv-surface border border-bv-border text-slate-200 font-semibold text-sm hover:border-bv-cyan hover:text-white transition-all">
+            Email Directly
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-bv-border/60 py-10 bg-bv-obsidian/90 text-xs text-slate-400 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-white">Ross Goodburn</span>
+        <span>— Candidate Showcase for BlueVoyant Channel & Alliances Executive</span>
+      </div>
+      <div class="flex items-center gap-6 font-mono text-[11px]">
+        <span>UK Right to Work: Active</span>
+        <span>Ref: Channel & Alliance Executive</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONTACT MODAL / POPUP -->
+  <div id="contact-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="glass-card rounded-2xl max-w-lg w-full p-6 sm:p-8 space-y-6 border-bv-cyan/40 relative shadow-2xl">
+      <button onclick="toggleModal('contact-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-1">
+        <span class="text-xs font-mono text-bv-cyan uppercase tracking-wider font-bold">Direct Communication</span>
+        <h3 class="text-2xl font-bold text-white">Connect with Ross Goodburn</h3>
+        <p class="text-xs text-slate-400">Channel & Alliances Executive Candidate for BlueVoyant</p>
+      </div>
+
+      <div class="space-y-3 font-mono text-xs">
+        <div class="flex items-center gap-3 p-3 rounded-lg bg-bv-surface border border-bv-border">
+          <i data-lucide="phone" class="w-4 h-4 text-bv-cyan"></i>
+          <a href="tel:+447970699906" class="text-white hover:text-bv-cyan transition-colors">+44 7970 699906</a>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-lg bg-bv-surface border border-bv-border">
+          <i data-lucide="mail" class="w-4 h-4 text-bv-cyan"></i>
+          <a href="mailto:ross.goodburn@gmail.com" class="text-white hover:text-bv-cyan transition-colors">ross.goodburn@gmail.com</a>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-lg bg-bv-surface border border-bv-border">
+          <i data-lucide="map-pin" class="w-4 h-4 text-bv-cyan"></i>
+          <span class="text-slate-300">Beaconsfield, Buckinghamshire, UK (30m to London)</span>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-lg bg-bv-surface border border-bv-border">
+          <i data-lucide="linkedin" class="w-4 h-4 text-bv-cyan"></i>
+          <a href="https://www.linkedin.com/in/rossgoodburn/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-bv-cyan transition-colors">linkedin.com/in/rossgoodburn</a>
+        </div>
+      </div>
+
+      <div class="pt-2">
+        <button onclick="copyContactDetails()" id="copy-btn" class="w-full py-2.5 rounded-lg bg-bv-surfaceLight border border-bv-border text-xs font-semibold text-slate-200 hover:text-white hover:border-bv-cyan transition-all flex items-center justify-center gap-2">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>Copy Contact Info to Clipboard</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+
+    // Tab Switching for 30-60-90 Roadmap
+    function switchTab(tabId) {
+      const tabs = ['plan-30', 'plan-60', 'plan-90'];
+      const buttons = ['tab-btn-30', 'tab-btn-60', 'tab-btn-90'];
+
+      tabs.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          if (id === tabId) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        }
+      });
+
+      buttons.forEach(btnId => {
+        const btn = document.getElementById(btnId);
+        if (btn) {
+          if (btnId === 'tab-btn-' + tabId.split('-')[1]) {
+            btn.className = 'flex-1 py-2 px-3 text-xs font-bold rounded-lg bg-gradient-to-r from-bv-cyan to-bv-blue text-bv-obsidian transition-all';
+          } else {
+            btn.className = 'flex-1 py-2 px-3 text-xs font-bold rounded-lg text-slate-400 hover:text-white transition-all';
+          }
+        }
+      });
+      lucide.createIcons();
+    }
+
+    // Modal toggling
+    function toggleModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.toggle('hidden');
+      }
+    }
+
+    // Clipboard copy with fallback for iframe sandboxing
+    function copyContactDetails() {
+      const textToCopy = "Ross Goodburn\nPhone: +44 7970 699906\nEmail: ross.goodburn@gmail.com\nLinkedIn: https://www.linkedin.com/in/rossgoodburn/\nLocation: Beaconsfield, Buckinghamshire (30 mins from London)";
+      
+      const textarea = document.createElement("textarea");
+      textarea.value = textToCopy;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      
+      try {
+        document.execCommand('copy');
+        const btn = document.getElementById('copy-btn');
+        const originalContent = btn.innerHTML;
+        btn.innerHTML = `<span class="text-emerald-400">✓ Details Copied to Clipboard!</span>`;
+        setTimeout(() => {
+          btn.innerHTML = originalContent;
+          lucide.createIcons();
+        }, 2000);
+      } catch (err) {
+        console.error('Could not copy text', err);
+      }
+      document.body.removeChild(textarea);
+    }
+  </script>
+</body>
+</html>
